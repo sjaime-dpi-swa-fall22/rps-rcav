@@ -21,6 +21,10 @@ class ApplicationController < ActionController::Base
     #render({ :plain => "Hello world!"}) # to render plain text
     # render({ :html => "<h1>Hello, World!</h1>".html_safe }) # to render html #directly, ,html_sage is required for security reasons
 
+    #to output json
+    #response_hash ={:my_move =>"rock", :computer_move => @comp_move, :outcome => @outcome}
+    #render({ :plain => response_hash.to_json})
+
     render({ :template => "game_templates/rock.html.erb"})
   end
 
